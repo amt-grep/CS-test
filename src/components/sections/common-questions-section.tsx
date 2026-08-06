@@ -1,4 +1,6 @@
 import type { ReactNode } from "react";
+
+import { Heading } from "@/components/ui/heading";
 import CommonQuestionsSectionIcon1 from "../svgs/common-questions-section-icon-1";
 import CommonQuestionsSectionIcon2 from "../svgs/common-questions-section-icon-2";
 
@@ -119,9 +121,9 @@ export default function CommonQuestionsSection({
           <p className="text-ploy-accent-primary-700 font-semibold text-sm tracking-wider uppercase min-w-0">
             {"Common questions"}
           </p>
-          <h2 className="text-balance text-ploy-neutral-inverse-900 font-semibold -tracking-wide min-w-0 mt-3 max-md:text-3xl md:text-4xl">
+          <Heading align="center" className="min-w-0 mt-3">
             {"Things people ask before signing up"}
-          </h2>
+          </Heading>
         </div>
         <div className="border-solid border-ploy-neutral-primary-s3 min-w-0 mt-12 border-t border-b">
           {items.map((item, index) => (
