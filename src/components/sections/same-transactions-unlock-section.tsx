@@ -12,6 +12,7 @@ import SameTransactionsUnlockSectionIcon3 from "../svgs/same-transactions-unlock
  * @ployComponentType section
  * @ployComponentPattern section
  * @ployComponentDescription Deterministic section inferred from heading: The same transactions unlock more than matching
+ * @ployComponentStatus stable
  */
 type SameTransactionsUnlockSectionIconItemProps = {
   icon: ReactNode;

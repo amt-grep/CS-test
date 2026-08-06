@@ -10,6 +10,7 @@ import CommonQuestionsSectionIcon2 from "../svgs/common-questions-section-icon-2
  * @ployComponentType section
  * @ployComponentPattern section
  * @ployComponentDescription Deterministic section inferred from label: Common questions
+ * @ployComponentStatus stable
  */
 type CommonQuestionsSectionIconItemProps = {
   className: string;

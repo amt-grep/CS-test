@@ -9,6 +9,7 @@ import HeroSectionIcon1 from "../svgs/hero-section-icon-1";
  * @ployComponentType section
  * @ployComponentPattern section
  * @ployComponentDescription Deterministic section inferred from heading: Find out what your company is actually paying for. It only takes 2 minutes.
+ * @ployComponentStatus stable
  */
 export default function FindOutWhatCompanySection() {
   return (
