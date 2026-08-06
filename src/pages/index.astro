@@ -1,11 +1,16 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { HomePage } from "@/components/pages/home";
-import { SITE_CONFIG } from "@/site-config";
+import Page from "../components/pages/home";
 
 export const prerender = true;
 ---
 
-<Layout title={SITE_CONFIG.name} description={SITE_CONFIG.description}>
-  <HomePage client:load />
+<Layout title="ClearSpend — Every transaction. Matched to its proof.">
+  <Fragment slot="head">
+    <meta name="description" content="ClearSpend reads the invoices and receipts already sitting in your Gmail and Drive, connects each one to the charge it belongs to, and gives your team a short list of what is still missing." />
+    <meta property="og:title" content="ClearSpend — Every transaction. Matched to its proof." />
+    <meta property="og:description" content="ClearSpend reads the invoices and receipts already sitting in your Gmail and Drive, connects each one to the charge it belongs to, and gives your team a short list of what is still missing." />
+    <meta property="og:image" content="https://bolt.new/static/og_default.png" />
+  </Fragment>
+  <Page client:load />
 </Layout>

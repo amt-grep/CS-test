@@ -1,62 +1,35 @@
-import { MotionConfig, motion } from "motion/react";
+import Navbar from "../layout/navbar";
+import HeroSection from "../sections/hero-section";
+import BorderInkSection from "../sections/border-ink-section";
+import TransactionManagementSection from "../sections/transaction-management-section";
+import HowItWorksSection from "../sections/how-it-works-section";
+import AIAssistantsMCPSection from "../sections/ai-assistants-mcp-section";
+import IntegrationsSection from "../sections/integrations-section";
+import SameTransactionsUnlockSection from "../sections/same-transactions-unlock-section";
+import FindOutWhatCompanySection from "../sections/find-out-what-company-section";
+import CommonQuestionsSection from "../sections/common-questions-section";
+import Footer from "../layout/footer";
 
-/**
- * TODO: Replace this entire home page with workspace brand content.
- * This is a placeholder starter page - customize the layout, hero section,
- * background pattern, typography, and messaging to match the brand.
- */
-export function HomePage() {
+export default function Page() {
   return (
-    <MotionConfig reducedMotion="user">
-      <div className="min-h-screen bg-ploy-background-primary text-ploy-text-primary flex items-center justify-center">
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={{
-            hidden: {},
-            visible: {
-              transition: {
-                staggerChildren: 0.18,
-                delayChildren: 0.4,
-              },
-            },
-          }}
-          className="text-center space-y-6 px-6"
-        >
-          <motion.h1
-            variants={{
-              hidden: { opacity: 0, y: 20, filter: "blur(10px)" },
-              visible: {
-                opacity: 1,
-                y: 0,
-                filter: "blur(0px)",
-                transition: {
-                  duration: 0.7,
-                },
-              },
-            }}
-            className="font-heading typography-heading text-4xl md:text-6xl lg:text-7xl"
-          >
-            Ready to Ploy
-          </motion.h1>
-          <motion.p
-            variants={{
-              hidden: { opacity: 0, y: 20, filter: "blur(10px)" },
-              visible: {
-                opacity: 1,
-                y: 0,
-                filter: "blur(0px)",
-                transition: {
-                  duration: 0.7,
-                },
-              },
-            }}
-            className="text-lg md:text-xl lg:text-2xl text-ploy-text-secondary max-w-md mx-auto"
-          >
-            Make something amazing!
-          </motion.p>
-        </motion.div>
+    <div id="root" className="min-w-0">
+      <div className="bg-ploy-background-primary text-ploy-text-secondary min-w-0 min-h-screen">
+        <header className="border-solid border-ploy-neutral-primary-s3 bg-ploy-background-primary/80 min-w-0 fixed z-50 backdrop-blur-xl duration-300 ease-in-out border-b top-0 inset-x-0">
+          <Navbar />
+        </header>
+        <main className="min-w-0">
+          <HeroSection />
+          <BorderInkSection />
+          <TransactionManagementSection />
+          <HowItWorksSection />
+          <AIAssistantsMCPSection />
+          <IntegrationsSection />
+          <SameTransactionsUnlockSection />
+          <FindOutWhatCompanySection />
+          <CommonQuestionsSection />
+        </main>
+        <Footer />
       </div>
-    </MotionConfig>
+    </div>
   );
 }
