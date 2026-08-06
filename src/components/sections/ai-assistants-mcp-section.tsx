@@ -1,3 +1,6 @@
+import { Card } from "@/components/ui/card";
+import { Heading } from "@/components/ui/heading";
+
 import AiAssistantsMcpSectionIcon1 from "../svgs/ai-assistants-mcp-section-icon-1";
 import AiAssistantsMcpSectionIcon2 from "../svgs/ai-assistants-mcp-section-icon-2";
 import AiAssistantsMcpSectionIcon3 from "../svgs/ai-assistants-mcp-section-icon-3";
@@ -19,9 +22,9 @@ export default function AIAssistantsMCPSection() {
             <p className="text-ploy-accent-primary-700 font-semibold text-sm tracking-wider uppercase min-w-0">
               {"AI Assistants (MCP)"}
             </p>
-            <h2 className="text-balance text-ploy-neutral-inverse-900 font-semibold -tracking-wide min-w-0 mt-3 max-md:text-3xl md:text-4xl">
+            <Heading className="min-w-0 mt-3">
               {"Ask Claude or ChatGPT about your transactions"}
-            </h2>
+            </Heading>
             <p className="text-pretty text-slate-500 leading-relaxed text-base min-w-0 mt-4">
               {"ClearSpend provides a read-only Model Context Protocol (MCP) server at" +
                 " "}
@@ -61,7 +64,7 @@ export default function AIAssistantsMCPSection() {
               }}
               className="min-w-0 absolute -z-10 blur-2xl rounded-3xl -inset-4"
             />
-            <div className="border-solid border-ploy-border-primary bg-ploy-background-primary min-w-0 shadow-[0px_1px_3px_0px_rgba(15,17,24,0.05),0px_12px_40px_0px_rgba(15,17,24,0.08)] rounded-2xl shadow-card overflow-hidden border text-ploy-text-primary">
+            <Card variant="panel" className="min-w-0 overflow-hidden">
               <div className="border-solid border-ploy-neutral-primary-s3 bg-ploy-background-secondary/60 min-w-0 flex items-center gap-2 px-4 py-3 border-b">
                 <AiAssistantsMcpSectionIcon3 />
                 <span className="text-gray-700 font-medium text-sm block">
@@ -97,7 +100,7 @@ export default function AIAssistantsMCPSection() {
                   </span>
                 </div>
               </div>
-            </div>
+            </Card>
           </div>
         </div>
       </div>

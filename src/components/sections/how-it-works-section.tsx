@@ -1,4 +1,6 @@
 import type { ReactNode } from "react";
+
+import { Heading } from "@/components/ui/heading";
 import HowItWorksSectionIcon1 from "../svgs/how-it-works-section-icon-1";
 import HowItWorksSectionIcon2 from "../svgs/how-it-works-section-icon-2";
 import HowItWorksSectionIcon3 from "../svgs/how-it-works-section-icon-3";
@@ -93,9 +95,9 @@ export default function HowItWorksSection({
           <p className="text-ploy-accent-primary-400 font-semibold text-sm tracking-wider uppercase min-w-0">
             {"How it works"}
           </p>
-          <h2 className="text-balance font-semibold -tracking-wide min-w-0 mt-3 max-md:text-3xl md:text-4xl">
+          <Heading tone="inherit" align="center" className="min-w-0 mt-3">
             {"From real charges to a review-ready evidence trail"}
-          </h2>
+          </Heading>
           <p className="text-pretty text-[rgb(176,183,198)] text-base min-w-0 mt-4">
             {"Four steps from raw statements to a clean, audit-ready record."}
           </p>

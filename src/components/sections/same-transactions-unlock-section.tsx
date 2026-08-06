@@ -1,4 +1,7 @@
 import type { ReactNode } from "react";
+
+import { Card } from "@/components/ui/card";
+import { Heading } from "@/components/ui/heading";
 import SameTransactionsUnlockSectionIcon1 from "../svgs/same-transactions-unlock-section-icon-1";
 import SameTransactionsUnlockSectionIcon2 from "../svgs/same-transactions-unlock-section-icon-2";
 import SameTransactionsUnlockSectionIcon3 from "../svgs/same-transactions-unlock-section-icon-3";
@@ -22,17 +25,17 @@ function SameTransactionsUnlockSectionIconItem({
   description,
 }: SameTransactionsUnlockSectionIconItemProps) {
   return (
-    <div className="border-solid border-ploy-neutral-primary-s3 bg-ploy-background-primary shadow-[0px_1px_2px_0px_rgba(15,17,24,0.04),0px_8px_24px_0px_rgba(15,17,24,0.06)] p-7 rounded-2xl border text-ploy-text-primary">
+    <Card className="p-7">
       <span className="bg-ploy-accent-primary-50 text-ploy-accent-primary-700 w-11 h-11 min-w-0 flex justify-center items-center shadow-[0px_0px_0px_0px_color-mix(in_srgb,var(--ploy-neutral-primary)_100%,transparent),0px_0px_0px_1px_rgb(214,247,233)] rounded-xl">
         {icon}
       </span>
-      <h3 className="text-ploy-neutral-inverse-900 font-semibold text-lg min-w-0 mt-5">
+      <Heading as="h3" variant="item" className="min-w-0 mt-5">
         {title}
-      </h3>
+      </Heading>
       <p className="text-slate-500 leading-relaxed text-sm min-w-0 mt-2.5">
         {description}
       </p>
-    </div>
+    </Card>
   );
 }
 
@@ -66,9 +69,9 @@ export default function SameTransactionsUnlockSection({
   return (
     <section className="min-w-0 max-md:py-24 md:py-28">
       <div className="min-w-0 max-w-screen-xl mx-auto max-md:px-5 md:px-8">
-        <h2 className="text-balance text-ploy-neutral-inverse-900 font-semibold -tracking-wide min-w-0 max-w-2xl max-md:text-3xl md:text-4xl">
+        <Heading className="min-w-0 max-w-2xl">
           {"The same transactions unlock more than matching"}
-        </h2>
+        </Heading>
         <div className="min-w-0 grid gap-6 mt-12 md:grid-cols-3">
           {items.map((item, index) => (
             <SameTransactionsUnlockSectionIconItem key={index} {...item} />

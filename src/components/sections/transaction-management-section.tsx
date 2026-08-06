@@ -1,4 +1,7 @@
 import type { ReactNode } from "react";
+
+import { Card } from "@/components/ui/card";
+import { Heading } from "@/components/ui/heading";
 import TransactionManagementSectionIcon1 from "../svgs/transaction-management-section-icon-1";
 import TransactionManagementSectionIcon2 from "../svgs/transaction-management-section-icon-2";
 import TransactionManagementSectionIcon3 from "../svgs/transaction-management-section-icon-3";
@@ -29,8 +32,10 @@ function TransactionManagementSectionIconItem({
   text_3,
 }: TransactionManagementSectionIconItemProps) {
   return (
-    <article
-      className="border-solid border-ploy-neutral-primary-s3 bg-ploy-background-primary relative shadow-[0px_1px_2px_0px_rgba(15,17,24,0.04),0px_8px_24px_0px_rgba(15,17,24,0.06)] duration-150 ease-in-out rounded-2xl group hover:shadow-card hover:translate-y-[-0.125rem] hover:shadow-[0_0_color-mix(in_srgb,var(--ploy-neutral-inverse)_0%,transparent),0_0_color-mix(in_srgb,var(--ploy-neutral-inverse)_0%,transparent),0_1px_3px_rgba(15,17,24,0.05),0_12px_40px_rgba(15,17,24,0.08)] max-md:p-7 md:p-9 overflow-hidden border text-ploy-text-primary"
+    <Card
+      as="article"
+      variant="interactive"
+      className="relative group max-md:p-7 md:p-9 overflow-hidden"
       data-ploy-hover-anchor="h2 h3 h4"
     >
       <div
@@ -46,9 +51,9 @@ function TransactionManagementSectionIconItem({
           {text}
         </span>
       </div>
-      <h3 className="text-ploy-neutral-inverse-900 font-semibold text-xl -tracking-wide min-w-0 mt-5">
+      <Heading as="h3" variant="card" className="min-w-0 mt-5">
         {text_1}
-      </h3>
+      </Heading>
       <p className="text-slate-500 leading-relaxed text-sm min-w-0 mt-3">
         {text_2}
       </p>
@@ -62,7 +67,7 @@ function TransactionManagementSectionIconItem({
         />
         {text_3}
       </span>
-    </article>
+    </Card>
   );
 }
 
@@ -122,9 +127,9 @@ export default function TransactionManagementSection({
           <p className="text-ploy-accent-primary-700 font-semibold text-sm tracking-wider uppercase min-w-0">
             {"Transaction management"}
           </p>
-          <h2 className="text-balance text-ploy-neutral-inverse-900 font-semibold -tracking-wide min-w-0 mt-3 max-md:text-3xl md:text-4xl">
+          <Heading align="center" className="min-w-0 mt-3">
             {"One system for every charge your company pays"}
-          </h2>
+          </Heading>
           <p className="text-pretty text-slate-500 text-base min-w-0 mt-4">
             {
               "ClearSpend brings charges and their proof together, so finance teams stop chasing receipts and start reviewing what matters."

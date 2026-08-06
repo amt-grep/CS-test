@@ -1,4 +1,7 @@
 import type { ReactNode } from "react";
+
+import { Card } from "@/components/ui/card";
+import { Heading } from "@/components/ui/heading";
 import IntegrationsSectionIcon1 from "../svgs/integrations-section-icon-1";
 import IntegrationsSectionIcon2 from "../svgs/integrations-section-icon-2";
 import IntegrationsSectionIcon3 from "../svgs/integrations-section-icon-3";
@@ -26,7 +29,10 @@ function IntegrationsSectionIconItem({
   text,
 }: IntegrationsSectionIconItemProps) {
   return (
-    <div className="border-solid border-ploy-neutral-primary-s3 bg-ploy-background-primary flex items-center gap-3 shadow-[0px_1px_2px_0px_rgba(15,17,24,0.04),0px_8px_24px_0px_rgba(15,17,24,0.06)] origin-[146px_43px] duration-150 ease-in-out p-5 rounded-2xl group hover:shadow-card hover:translate-y-[-0.125rem] hover:shadow-[0_0_color-mix(in_srgb,var(--ploy-neutral-inverse)_0%,transparent),0_0_color-mix(in_srgb,var(--ploy-neutral-inverse)_0%,transparent),0_1px_3px_rgba(15,17,24,0.05),0_12px_40px_rgba(15,17,24,0.08)] border text-ploy-text-primary">
+    <Card
+      variant="interactive"
+      className="flex items-center gap-3 origin-[146px_43px] p-5 group"
+    >
       <span className={textClassName}>{icon}</span>
       <div>
         <p className="text-ploy-text-secondary font-semibold text-sm min-w-0">
@@ -34,7 +40,7 @@ function IntegrationsSectionIconItem({
         </p>
         <p className="text-[rgb(133,144,168)] text-xs min-w-0">Connected</p>
       </div>
-    </div>
+    </Card>
   );
 }
 
@@ -111,9 +117,9 @@ export default function IntegrationsSection({
           <p className="text-ploy-accent-primary-700 font-semibold text-sm tracking-wider uppercase min-w-0">
             {"Integrations"}
           </p>
-          <h2 className="text-balance text-ploy-neutral-inverse-900 font-semibold -tracking-wide min-w-0 mt-3 max-md:text-3xl md:text-4xl">
+          <Heading align="center" className="min-w-0 mt-3">
             {"Connect the tools you already use"}
-          </h2>
+          </Heading>
           <p className="text-pretty text-slate-500 text-base min-w-0 mt-4">
             {
               "ClearSpend plugs into your existing tools to detect subscriptions, track renewals, and sync spend data without switching tabs."
