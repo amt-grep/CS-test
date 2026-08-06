@@ -1,3 +1,5 @@
+import { Button } from "@/components/ui/button";
+
 import NavbarIcon1 from "../svgs/navbar-icon-1";
 import NavbarIcon2 from "../svgs/navbar-icon-2";
 
@@ -55,14 +57,15 @@ export default function Navbar({ items = links }: { items?: LinkItemProps[] }) {
         >
           {"Sign In"}
         </a>
-        <a
-          href="#"
-          className="bg-ploy-button-secondary-background text-ploy-button-secondary-text font-semibold text-sm block shadow-[0px_1px_2px_0px_rgba(15,17,24,0.04),0px_8px_24px_0px_rgba(15,17,24,0.06)] duration-150 ease-in-out px-4 py-2 rounded-lg hover:bg-ploy-button-secondary-background hover:shadow-[0_0_color-mix(in_srgb,var(--ploy-neutral-inverse)_0%,transparent),0_0_color-mix(in_srgb,var(--ploy-neutral-inverse)_0%,transparent),0_20px_60px_-20px_rgba(31,168,130,0.35)]"
-          data-ploy-component-type="button"
-          data-ploy-component-variant="secondary"
-        >
-          {"Start for Free"}
-        </a>
+        <Button asChild size="nav">
+          <a
+            href="#"
+            data-ploy-component-type="button"
+            data-ploy-component-variant="secondary"
+          >
+            {"Start for Free"}
+          </a>
+        </Button>
       </div>
       <button
         aria-label="Toggle menu"
