@@ -12,6 +12,7 @@ import HowItWorksSectionIcon4 from "../svgs/how-it-works-section-icon-4";
  * @ployComponentType section
  * @ployComponentPattern section
  * @ployComponentDescription Deterministic section inferred from label: How it works
+ * @ployComponentStatus stable
  */
 type HowItWorksSectionIconItemProps = {
   icon: ReactNode;

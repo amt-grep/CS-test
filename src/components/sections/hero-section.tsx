@@ -11,6 +11,7 @@ import HeroSectionIcon3 from "../svgs/hero-section-icon-3";
  * @ployComponentType section
  * @ployComponentPattern hero
  * @ployComponentDescription Deterministic hero section inferred from first meaningful content block
+ * @ployComponentStatus stable
  */
 type ListItemProps = {
   style_backgroundImage: string;

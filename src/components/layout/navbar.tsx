@@ -9,6 +9,7 @@ import NavbarIcon2 from "../svgs/navbar-icon-2";
  * @ployComponentType component
  * @ployComponentPattern navbar
  * @ployComponentDescription Main navigation for the website.
+ * @ployComponentStatus stable
  */
 type LinkItemProps = {
   href: string;

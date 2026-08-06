@@ -16,6 +16,7 @@ import AiAssistantsMcpSectionIcon2 from "../svgs/ai-assistants-mcp-section-icon-
  * @ployComponentType section
  * @ployComponentPattern section
  * @ployComponentDescription Deterministic section inferred from label: Integrations
+ * @ployComponentStatus stable
  */
 type IntegrationsSectionIconItemProps = {
   textClassName: string;

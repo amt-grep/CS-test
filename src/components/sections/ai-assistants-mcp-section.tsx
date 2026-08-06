@@ -12,6 +12,7 @@ import AiAssistantsMcpSectionIcon4 from "../svgs/ai-assistants-mcp-section-icon-
  * @ployComponentType section
  * @ployComponentPattern section
  * @ployComponentDescription Deterministic section inferred from label: AI Assistants (MCP)
+ * @ployComponentStatus stable
  */
 export default function AIAssistantsMCPSection() {
   return (

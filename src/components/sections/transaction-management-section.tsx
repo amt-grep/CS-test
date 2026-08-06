@@ -13,6 +13,7 @@ import TransactionManagementSectionIcon4 from "../svgs/transaction-management-se
  * @ployComponentType section
  * @ployComponentPattern section
  * @ployComponentDescription Deterministic section inferred from label: Transaction management
+ * @ployComponentStatus stable
  */
 type TransactionManagementSectionIconItemProps = {
   style_backgroundImage: string;
