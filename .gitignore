@@ -37,3 +37,6 @@ wrangler.toml
 logs/
 lost+found/
 .ploy/
+ploy.astro.config.mjs
+ploy.ploydb-client.mjs
+ploy.ploydb-auth-adapter.mjs
