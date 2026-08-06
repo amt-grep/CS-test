@@ -18,16 +18,14 @@ const wranglerConfig = ["./wrangler.toml", "./wrangler.jsonc", "./wrangler.json"
 
 // Separate vite cache dirs so `astro dev` and `astro build`/`check` don't conflict.
 const astroCommand = process.argv.slice(2).find((arg) => !arg.startsWith("-"));
-const viteCacheDir =
-  astroCommand === "dev" || astroCommand === "preview"
-    ? "node_modules/.vite-dev"
-    : "node_modules/.vite-build";
+const isDev = astroCommand === "dev" || astroCommand === "preview";
+const viteCacheDir = isDev ? "node_modules/.vite-dev" : "node_modules/.vite-build";
 
 // https://astro.build/config
 export default defineConfig({
   // Patched at deploy time by Ploy — must remain a string literal. See AGENTS.md "Sitemap".
   site: "https://example.com",
-  output: "server",
+  output: isDev ? "static" : "server",
   trailingSlash: "never",
   // Disable automatic Cloudflare KV session provisioning. Ploy sites don't
   // use Astro sessions; without this the adapter auto-creates a KV namespace
@@ -41,10 +39,14 @@ export default defineConfig({
     // WELL_KNOWN_ASSET_ROUTES in ploy-world.
     assets: "_ploy_static/_astro",
   },
-  adapter: cloudflare({
-    imageService: "compile",
-    ...(wranglerConfig && { configPath: wranglerConfig }),
-  }),
+  ...(isDev
+    ? {}
+    : {
+        adapter: cloudflare({
+          imageService: "compile",
+          ...(wranglerConfig && { configPath: wranglerConfig }),
+        }),
+      }),
   integrations: [
     mdx(),
     react(),
