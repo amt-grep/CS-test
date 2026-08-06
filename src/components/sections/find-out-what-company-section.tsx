@@ -1,3 +1,6 @@
+import { Button } from "@/components/ui/button";
+import { Heading } from "@/components/ui/heading";
+
 import HeroSectionIcon1 from "../svgs/hero-section-icon-1";
 
 /**
@@ -29,33 +32,48 @@ export default function FindOutWhatCompanySection() {
               className="min-w-0 absolute opacity-[0.07] inset-0"
             />
           </div>
-          <h2 className="text-balance text-ploy-text-inverse font-semibold -tracking-wide min-w-0 max-w-2xl mx-auto max-md:text-3xl md:text-4xl">
+          <Heading
+            tone="inverse"
+            align="center"
+            className="min-w-0 max-w-2xl mx-auto"
+          >
             {
               "Find out what your company is actually paying for. It only takes 2 minutes."
             }
-          </h2>
+          </Heading>
           <p className="text-[rgb(176,183,198)] text-sm min-w-0 mt-4">
             {"7-day free trial. No credit card required."}
           </p>
           <div className="min-w-0 flex justify-center items-center gap-3 mt-8 max-md:flex-col md:flex-row">
-            <a
-              href="#"
-              className="bg-white text-ploy-neutral-inverse-900 font-semibold text-sm flex justify-center items-center gap-2 shadow-[0px_1px_2px_0px_rgba(15,17,24,0.04),0px_8px_24px_0px_rgba(15,17,24,0.06)] duration-150 ease-in-out px-6 py-3.5 rounded-xl group hover:bg-[rgb(236_238_242_/_1)] max-md:w-full"
-              data-ploy-hover-anchor="h1"
-              data-ploy-component-type="button"
-              data-ploy-component-variant="primary"
+            <Button
+              asChild
+              variant="inverse"
+              responsive="mobile-full"
+              className="group"
             >
-              {"Start for Free"}
-              <HeroSectionIcon1 />
-            </a>
-            <a
-              href="#how-it-works"
-              className="border-solid border-ploy-button-secondary-border/20 text-ploy-button-secondary-text font-semibold text-sm flex justify-center items-center gap-2 transition-colors px-6 py-3.5 rounded-xl hover:bg-[rgba(255,255,255,0.1)] max-md:w-full border"
-              data-ploy-component-type="button"
-              data-ploy-component-variant="outline"
+              <a
+                href="#"
+                data-ploy-hover-anchor="h1"
+                data-ploy-component-type="button"
+                data-ploy-component-variant="primary"
+              >
+                {"Start for Free"}
+                <HeroSectionIcon1 />
+              </a>
+            </Button>
+            <Button
+              asChild
+              variant="inverse-outline"
+              responsive="mobile-full"
             >
-              {"See a live demo"}
-            </a>
+              <a
+                href="#how-it-works"
+                data-ploy-component-type="button"
+                data-ploy-component-variant="outline"
+              >
+                {"See a live demo"}
+              </a>
+            </Button>
           </div>
         </div>
       </div>

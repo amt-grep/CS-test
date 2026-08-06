@@ -1,3 +1,6 @@
+import { Button } from "@/components/ui/button";
+import { Heading } from "@/components/ui/heading";
+
 import HeroSectionIcon1 from "../svgs/hero-section-icon-1";
 import HeroSectionIcon2 from "../svgs/hero-section-icon-2";
 import HeroSectionIcon3 from "../svgs/hero-section-icon-3";
@@ -335,7 +338,10 @@ export default function HeroSection() {
             <span className="bg-ploy-background-accent-primary w-1.5 h-1.5 flex rounded-full" />
             {" Now with AI assistant integration"}
           </div>
-          <h1
+          <Heading
+            as="h1"
+            variant="hero"
+            align="center"
             data-ploy-animation-fx-hint="fade-in"
             style={{
               animationName: "fade-up",
@@ -344,7 +350,7 @@ export default function HeroSection() {
               animationDelay: "0.06s",
               animationFillMode: "both",
             }}
-            className="text-balance text-ploy-neutral-inverse-900 font-semibold -tracking-wide min-w-0 mt-6 max-md:leading-none max-md:text-4xl md:leading-none md:text-6xl"
+            className="min-w-0 mt-6"
           >
             {"Every transaction."}
             <br className="text-balance min-w-0" />
@@ -357,7 +363,7 @@ export default function HeroSection() {
               {" " + "Matched"}
             </span>{" "}
             {"to its proof."}
-          </h1>
+          </Heading>
           <p
             data-ploy-animation-fx-hint="fade-in"
             style={{
@@ -384,25 +390,27 @@ export default function HeroSection() {
             }}
             className="min-w-0 flex justify-center items-center gap-3 mt-8 max-md:flex-col md:flex-row"
           >
-            <a
-              href="#"
-              className="bg-ploy-button-secondary-background text-ploy-button-secondary-text font-semibold text-sm flex justify-center items-center gap-2 shadow-[0px_1px_2px_0px_rgba(15,17,24,0.04),0px_8px_24px_0px_rgba(15,17,24,0.06)] duration-150 ease-in-out px-6 py-3.5 rounded-xl group hover:bg-ploy-button-secondary-background hover:shadow-[0_0_color-mix(in_srgb,var(--ploy-neutral-inverse)_0%,transparent),0_0_color-mix(in_srgb,var(--ploy-neutral-inverse)_0%,transparent),0_20px_60px_-20px_rgba(31,168,130,0.35)] max-md:w-full"
-              data-ploy-hover-anchor="h1"
-              data-ploy-component-type="button"
-              data-ploy-component-variant="secondary"
-            >
-              {"Start for Free"}
-              <HeroSectionIcon1 />
-            </a>
-            <a
-              href="#how-it-works"
-              className="border-solid border-ploy-button-secondary-border bg-white text-gray-700 font-semibold text-sm flex justify-center items-center gap-2 shadow-[0px_1px_2px_0px_rgba(15,17,24,0.04),0px_8px_24px_0px_rgba(15,17,24,0.06)] duration-150 ease-in-out px-6 py-3.5 rounded-xl hover:bg-[rgb(246_247_249_/_1)] max-md:w-full border"
-              data-ploy-component-type="button"
-              data-ploy-component-variant="outline"
-            >
-              <HeroSectionIcon2 />
-              {"See a Live Demo"}
-            </a>
+            <Button asChild responsive="mobile-full" className="group">
+              <a
+                href="#"
+                data-ploy-hover-anchor="h1"
+                data-ploy-component-type="button"
+                data-ploy-component-variant="secondary"
+              >
+                {"Start for Free"}
+                <HeroSectionIcon1 />
+              </a>
+            </Button>
+            <Button asChild variant="outline" responsive="mobile-full">
+              <a
+                href="#how-it-works"
+                data-ploy-component-type="button"
+                data-ploy-component-variant="outline"
+              >
+                <HeroSectionIcon2 />
+                {"See a Live Demo"}
+              </a>
+            </Button>
           </div>
           <p
             data-ploy-animation-fx-hint="fade-in"
