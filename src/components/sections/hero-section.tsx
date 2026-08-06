@@ -353,17 +353,7 @@ export default function HeroSection() {
             }}
             className="min-w-0 mt-6"
           >
-            {"Every transaction."}
-            <br className="text-balance min-w-0" />
-            <span
-              style={{
-                fontFamily: "'Instrument Serif', ui-serif, Georgia, serif",
-              }}
-              className="text-balance text-ploy-accent-primary-800 italic min-w-0"
-            >
-              {" " + "Matched"}
-            </span>{" "}
-            {"to its proof."}
+            {"Hello world"}
           </Heading>
           <p
             data-ploy-animation-fx-hint="fade-in"
