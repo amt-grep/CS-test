@@ -353,7 +353,7 @@ export default function HeroSection() {
             }}
             className="min-w-0 mt-6"
           >
-            {"Hello world"}
+            {"Every transaction. Matched to its proof."}
           </Heading>
           <p
             data-ploy-animation-fx-hint="fade-in"
